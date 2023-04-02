@@ -46,6 +46,7 @@
             const querySnapshot1 = await getDocs(collection(db, "engines"));
             querySnapshot1.forEach((doc) => {
                 console.log(doc.data());
+                <h1>Car:</h1>
                 console.log(doc.data()['cylinders'],doc.data()['horsepower'],doc.data()['name']);
                 document.writeln(doc.data()['cylinders'],' ',doc.data()['horsepower'],' ',doc.data()['name'],'<br>');
             });
