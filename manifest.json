@@ -1,6 +1,6 @@
 {
-    "name": "PWA PSM",
-    "short_name": "PWA",
+    "name": "AO PSM",
+    "short_name": "AO",
     "icons": [{
         "src": "logo.png",
         "sizes": "192x192",

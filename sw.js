@@ -1,7 +1,7 @@
 var cacheName = 'architektura oprogramowania';
 var filesToCache = [
   './',
-  './main.html',
+  './index.html',
   './js/main.js',
 ];
 

@@ -39,30 +39,58 @@
             const querySnapshot = await getDocs(collection(db, "cars"));
             querySnapshot.forEach((doc) => {
                 console.log(doc.data());
-                console.log(doc.data()['brand'],doc.data()['model'],doc.data()['vehType'],doc.data()['year'],doc.data()['price'],doc.data()['amount'],doc.data()['isNew'],doc.data()['engine']);
-                document.writeln(doc.data()['brand'],' ',doc.data()['model'],' ',doc.data()['vehType'],' ',doc.data()['year'],doc.data()['price'],' ',doc.data()['amount'],' ',doc.data()['isNew'],' ',doc.data()['engine'],'<br>');
+                console.log(doc.data()['brand'],doc.data()['model'],doc.data()['vehType'],doc.data()['year'].toDate(),doc.data()['price'],doc.data()['amount'],doc.data()['isNew'],doc.data()['engine']);
+                document.writeln('<p class="">',
+                    'Brand: ',doc.data()['brand'],'<br>',
+                    'Model: ',doc.data()['model'],'<br>',
+                    'Vehicle type: ',doc.data()['vehType'],'<br>',
+                    'Year: ',doc.data()['year'].toDate().getFullYear(),'<br>',
+                    'Price: ',doc.data()['price'],'<br>',
+                    'Amount: ',doc.data()['amount'],'<br>',
+                    'Vehicle is new: ',doc.data()['isNew'],'<br>',
+                    'Engine: ',doc.data()['engine'],'<br>', '</p>');
             });
 
             const querySnapshot1 = await getDocs(collection(db, "engines"));
             querySnapshot1.forEach((doc) => {
                 console.log(doc.data());
-                <h1>Car:</h1>
-                console.log(doc.data()['cylinders'],doc.data()['horsepower'],doc.data()['name']);
-                document.writeln(doc.data()['cylinders'],' ',doc.data()['horsepower'],' ',doc.data()['name'],'<br>');
+                console.log(
+                    doc.data()['cylinders'],
+                    doc.data()['horsepower'],
+                    doc.data()['name']
+                    );
+                document.writeln('<p class="">',
+                    'Cylinders: ',doc.data()['cylinders'],'<br>',
+                    'Horsepower: ',doc.data()['horsepower'],'<br>',
+                    'Name: ',doc.data()['name'],
+                '<br>', '</p>');
             });
 
             const querySnapshot2 = await getDocs(collection(db, "motorbikes"));
             querySnapshot2.forEach((doc) => {
                 console.log(doc.data());
-                console.log(doc.data()['brand'],doc.data()['model'],doc.data()['class'],doc.data()['year'],doc.data()['price'],doc.data()['amount'],doc.data()['isNew']);
-                document.writeln(doc.data()['brand'],' ',doc.data()['model'],' ',doc.data()['class'],' ',doc.data()['year'],doc.data()['price'],' ',doc.data()['amount'],' ',doc.data()['isNew'],'<br>');
+                console.log(doc.data()['brand'],doc.data()['model'],doc.data()['class'],doc.data()['year'].toDate(),doc.data()['price'],doc.data()['amount'],doc.data()['isNew']);
+                document.writeln('<p class="">',
+                    'Brand: ',doc.data()['brand'],'<br>',
+                    'Model: ',doc.data()['model'],'<br>',
+                    'Class: ',doc.data()['class'],'<br>',
+                    'Year: ',doc.data()['year'].toDate().getFullYear(),'<br>',
+                    'Price: ',doc.data()['price'],'<br>',
+                    'Amount: ',doc.data()['amount'],'<br>',
+                    'Vehicle is new: ',doc.data()['isNew'],'<br>', '</p>');
             });
 
             const querySnapshot3 = await getDocs(collection(db, "trucks"));
             querySnapshot3.forEach((doc) => {
                 console.log(doc.data());
-                console.log(doc.data()['brand'],doc.data()['model'],doc.data()['year'],doc.data()['price'],doc.data()['amount'],doc.data()['isNew']);
-                document.writeln(doc.data()['brand'],' ',doc.data()['model'],' ',doc.data()['year'],doc.data()['price'],' ',doc.data()['amount'],' ',doc.data()['isNew'],'<br>');
+                console.log(doc.data()['brand'],doc.data()['model'],doc.data()['year'],toDate(),doc.data()['price'],doc.data()['amount'],doc.data()['isNew']);
+                document.writeln('<p class="">',
+                    'Brand: ',doc.data()['brand'],'<br>',
+                    'Model: ',doc.data()['model'],'<br>',
+                    'Year: ',doc.data()['year'].toDate().getFullYear(), '<br>',
+                    'Price: ',doc.data()['price'],'<br>',
+                    'Amount: ',doc.data()['amount'],'<br>',
+                    'Vehicle is new: ',doc.data()['isNew'],'<br>', '</p>');
             });
 
         </script>
